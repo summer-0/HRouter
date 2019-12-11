@@ -1,0 +1,2 @@
+include ':app', ':common', ':order', ':personal', ':annotation-hrouter', ':complier-hrouter', ':hrouter-api'
+rootProject.name='HRouter'

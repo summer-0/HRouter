@@ -1,0 +1,36 @@
+//要想自定义的config.gradle有效，需要在根目录的build.gradle文件头部中配置 apply from: "config.gradle"
+//添加多个自定义属性，可通过ext代码块
+ext {
+    username = "xinhua"
+
+    //生成 / 开发环境  （正式/测试）
+    isRelease = true  //是否为发布版本
+
+    packageNameForAPT = "com.xinhua.hrouter.apt"
+
+    //建立map存储
+    androidId = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.1",
+            minSdkVersion    : 21,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    appId = [
+            app     : "com.xinhua.hrouter",
+            order   : "com.xinhua.order",
+            personal: "com.xinhua.personal"
+    ]
+    // 正式/测试 环境URL
+    url = [
+            debug  : "https://11.22.33.44/debug",
+            release: "https://11.22.33.44/release"
+    ]
+
+    dependencies = [
+            appcompat       : 'androidx.appcompat:appcompat:1.1.0',
+            constraintlayout: 'androidx.constraintlayout:constraintlayout:1.1.3'
+    ]
+}
